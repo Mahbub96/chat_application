@@ -40,6 +40,8 @@ function saveName() {
   });
 
   socket.on("received", (data) => {
+    let tone = new Audio('./assets/audio/tone.mp3');
+    tone.play();
     addChat(`${data.name} : ${data.message}`, "left");
   });
 }
