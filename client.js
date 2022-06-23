@@ -1,4 +1,4 @@
-const socket = io('https://demo-chat-backend.herokuapp.com');
+const socket = io('http://localhost:3002');
 
 const form = document.getElementById('form');
 const msg = document.getElementById("message");
@@ -38,6 +38,12 @@ function saveName(){
     socket.on('user-joined',client_name=>{
         addChat(`${client_name} joined the chat!`,"left");
     })
+
+
+    socket.on('leave',client_name=>{
+        addChat(`${client_name} leave from the chat!`,"left");
+    })
+
 
     socket.on('received',(data)=>{
         addChat(`${data.name} : ${data.message}`,"left");
