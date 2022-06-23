@@ -52,7 +52,7 @@ function saveName(){
 }
 
 
-form.addEventListener('submit',e=>{
+form.addEventListener('submit',(e)=>{
     e.preventDefault();
     const messages = msg.value;
     addChat(`${messages} `,"right");
