@@ -6,6 +6,9 @@ const chats = document.querySelector(".chats");
 const chat_box = document.querySelector(".chat-box");
 let client_name = document.getElementById("client_name");
 
+
+chats.scrollTop = chats.scrollHeight;
+
 function addChat(msg, pos) {
   const messageElement = document.createElement("p");
   messageElement.innerText = msg;

@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.client-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 55vh;
+}
+
+.chat-box {
+  position: relative;
+  height: 85vh;
+  border: 1px solid black;
+  display: none;
+}
+
+.chat-box .chats {
+  height: 76vh;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.chat-box p.right {
+  text-align: right;
+  float: right;
+  clear: both;
+  max-width: 75%;
+}
+
+.chat-box p.left {
+  text-align: left;
+  float: left;
+  max-width: 75%;
+  clear: both;
+}
+
+.chat-box form {
+  position: absolute;
+  bottom: 10px;
+  left: 5px;
+  right: 5px;
+  box-shadow: 0px -1px 20px rgb(175, 174, 174);
+}
+
+.chat-box form #message {
+  float: left;
+  margin-left: 1rem;
+  width: 73vw !important;
+}
+
+.chat-box form .btn {
+  display: block;
+  float: right;
+}

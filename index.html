@@ -5,8 +5,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <script defer src="https://demo-chat-backend.herokuapp.com/socket.io/socket.io.js"></script>
-    <script defer src="client.js"></script>
+    <script
+      defer
+      src="https://demo-chat-backend.herokuapp.com/socket.io/socket.io.js"
+    ></script>
+    <script defer src="./src/client.js"></script>
 
     <!-- Bootstrap CSS -->
     <link
@@ -15,60 +18,17 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      .chat-box {
-        position: relative;
-        height: 90vh;
-        border: 1px solid black;
-        display: none;
-      }
-      .chat-box .chats {
-        height: 81vh;
-        overflow: scroll;
-        overflow-x: hidden;
-      }
-      .chat-box p.right {
-        text-align: right;
-        float: right;
-        clear: both;
-        max-width: 75%;
-      }
-      .chat-box p.left {
-        text-align: left;
-        float: left;
-        max-width: 75%;
-        clear: both;
-      }
-      .chat-box form {
-        position: absolute;
-        bottom: 10px;
-        left: 5px;
-        right: 5px;
-      }
-      .chat-box form #message {
-        display: block;
-        width: 75vw !important;
-        float: left;
-      }
-      .chat-box form .btn {
-        display: block;
-        float: right;
-      }
-    </style>
+    <link rel="stylesheet" href="./src/style.css" />
     <title>Real Time Chat Application</title>
   </head>
   <body>
     <div class="container">
       <header>
         <nav class="navbar navbar-light bg-light justify-content-between">
-          <a class="navbar-brand">Live Chat</a>
+          <p class="navbar-brand">Live Chat</p>
           <div class="form-inline">
-            <p class="" id="avater_name"></p>
-          </form>
+            <p id="avater_name"></p>
+          </div>
         </nav>
 
         <div class="client-name">
@@ -76,7 +36,8 @@
             type="text"
             placeholder="Enter Your Name"
             class="form-control"
-            id="client_name" required
+            id="client_name"
+            required
           />
           <button onclick="saveName()" class="btn btn-primary">Okay</button>
         </div>
@@ -84,7 +45,14 @@
       <div class="chat-box">
         <div class="chats"></div>
         <form action="#" id="form">
-          <input type="text" class="form-control border border-primary" id="message" placeholder="Enter Your Message" autocomplete="off" required />
+          <input
+            type="text"
+            class="form-control border border-primary"
+            id="message"
+            placeholder="Enter Your Message"
+            autocomplete="off"
+            required
+          />
           <input type="submit" value="Send" class="btn btn-primary" />
         </form>
       </div>
