@@ -5,7 +5,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <script defer src="https://demo-chat-backend.herokuapp.com/socket.io/socket.io.js"></script>
+    <script
+      defer
+      src="https://demo-chat-backend.herokuapp.com/socket.io/socket.io.js"
+    ></script>
+
     <script defer src="client.js"></script>
 
     <!-- Bootstrap CSS -->
@@ -67,9 +71,8 @@
         <nav class="navbar navbar-light bg-light justify-content-between">
           <a class="navbar-brand">Live Chat</a>
           <div class="form-inline">
-            <p class="" id="avater_name"></p>
-            <i class="bi bi-person"></i>
-          </form>
+            <p id="avater_name"></p>
+          </div>
         </nav>
 
         <div class="client-name">
@@ -77,16 +80,44 @@
             type="text"
             placeholder="Enter Your Name"
             class="form-control"
-            id="client_name" required
+            id="client_name"
+            required
           />
           <button onclick="saveName()" class="btn btn-primary">Okay</button>
         </div>
       </header>
+
       <div class="chat-box">
         <div class="chats"></div>
-        <form action="#" id="form">
-          <input type="text" class="form-control border border-primary" id="message" placeholder="Enter Your Message" required />
-          <input type="submit" value="Send" class="btn btn-primary" />
+        <form id="form" class="container">
+          <table>
+            <tr>
+              <td>
+                <input
+                  type="text"
+                  class="form-control border border-primary"
+                  id="message"
+                  placeholder="Enter Your Message"
+                  required
+                />
+              </td>
+              <td>
+                <button type="submit" class="btn btn-primary">Send</button>
+              </td>
+            </tr>
+          </table>
+
+          <!-- <div class="input-group">
+            <input
+              type="text"
+              class="form-control border border-primary"
+              id="message"
+              placeholder="Enter Your Message"
+              required
+            />
+            <button type="submit" class="btn btn-primary">Send</button>
+            <!-- <input type="submit" value="Send" class="btn btn-primary" />
+          </div> -->
         </form>
       </div>
     </div>
